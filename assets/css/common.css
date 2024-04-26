@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--light);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  content-visibility: auto;
+}
+
+:root {
+  --website: #ff385c;
+  --discount: #f11a00;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #848484;
+  --light-black: #212121;
+  --light: "Nunito-Light", sans-serif;
+  --medium: "Nunito-Medium", sans-serif;
+  --bold: "Nunito-Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/Nunito-Light.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-Medium";
+  src: url("../fonts/Nunito-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito-Bold.ttf");
+}
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem 0rem;
+}
+.header {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+/* Navbar */
+.navbar {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.logo {
+  font: 600 4em var(--bold);
+
+  margin-right: 1.5em;
+  display: flex;
+}
+
+.logo > a {
+  color: var(--website);
+}
+
+.menuBtn {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin-right: 1em;
+}
+.menuBtn > img {
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.locationBtn {
+  display: inline-block;
+  font-family: inherit;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5.5em;
+  font: 400 1.4rem var(--medium);
+}
+
+.locationBtn > img {
+  height: 1.6rem;
+  left: 1.6rem;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.searchHolder {
+  width: 30rem;
+}
+.searchHolder > input {
+  display: block;
+
+  width: 100%;
+  padding: 1rem;
+  font: 400 1.4rem var(--medium);
+  color: #212121;
+  box-shadow: 0 0.2rem 0.8rem rgba(28, 28, 28, 0.08);
+  border: 0.1rem solid #e8e8e8;
+  background: url("../icons/search.svg") center right 0.7rem no-repeat,
+    transparent;
+  border-radius: 1rem;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbarLinks > a {
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  color: var(--light-black);
+
+  font: 500 1.4rem var(--medium);
+  gap: 0.5rem;
+  background-color: transparent;
+}
+
+.navbarLinks > a > img {
+  height: 3rem;
+  width: 3rem;
+
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+/* Dynamic Links */
+
+.dynamicLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.dynamicLinks > a {
+  padding: 0.8rem 1.5rem;
+
+  font: 500 1.5em var(--medium);
+  border-bottom: 0.2rem solid #fff;
+  color: var(--light-black);
+
+  transition: all 0.5s ease;
+}
+
+.dynamicLinks > a:hover {
+  color: var(--website);
+  border-color: var(--website);
+}
+
+/* Product */
+.link {
+  height: auto;
+  width: 100%;
+}
+.imageHolder {
+  height: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.imageHolder > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.imageHolder > img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 100%;
+  height: 0;
+}
+.productName {
+  color: #211a1e;
+  font: 500 1.6rem var(--medium);
+  line-height: 160%;
+  margin-top: 0.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.details {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+}
+.price {
+  color: var(--black);
+  font: 500 1.6rem var(--medium);
+  white-space: nowrap;
+}
+.beforePrice {
+  color: #a6a3a5;
+  font: 400 1.4em var(--medium);
+  line-height: 160%;
+  text-decoration: line-through;
+  white-space: nowrap;
+  margin-left: 0.4rem;
+}
+.discount {
+  color: var(--discount);
+  font: 400 1.4rem var(--medium);
+  line-height: 160%;
+  white-space: nowrap;
+  margin-left: 0.8rem;
+  text-transform: capitalize;
+}
+
+/* SEO content */
+.seoContent,
+.faqContainer {
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.seoContent > h1 {
+  color: var(--black);
+
+  font: 500 2.5rem var(--medium);
+  margin: 1em 0 1.5em;
+}
+.seoContent > h2 {
+  color: var(--black);
+  font: 500 2rem var(--medium);
+  margin: 0.7em 0;
+}
+.seoContent > p {
+  color: var(--light-black);
+
+  font: 500 1.5rem var(--medium);
+  line-height: 2.2rem;
+  margin: 0.5em 0;
+}
+
+/* Faq */
+.faqContainer > h2 {
+  color: var(--black);
+  font: 500 2.5rem var(--medium);
+  margin-bottom: 0.5em;
+}
+
+.faqContainer > h2 > img {
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.faqQnAs {
+  padding: 1rem;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 1rem;
+
+  font: 500 1.6rem var(--medium);
+  color: var(--black);
+
+  margin-top: 0.5em;
+  cursor: pointer;
+  line-height: 2.5rem;
+}
+
+.questions > img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.answers {
+  display: none;
+  color: var(--grey);
+  height: auto;
+  width: 100%;
+
+  padding: 1rem 2rem;
+  font: 400 1.5rem var(--light);
+}
+
+.visible {
+  display: block !important;
+  animation: TextAnimation 0.5s ease 0s 1 forwards;
+}
+
+@keyframes TextAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* Footer */
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #f3f7f8;
+}
+
+.nestedFooter {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  height: auto;
+  width: 100%;
+}
+
+.footerHeading {
+  color: var(--black);
+  font-size: 2.5em;
+  font-weight: 600;
+  font: 500 2.5rem var(--medium);
+  margin-bottom: 0.3em;
+}
+
+.linkHolder {
+  margin: 0.8em 0;
+}
+
+.footerLink {
+  position: relative;
+
+  color: #4e4c4c;
+
+  font: 500 1.4rem var(--medium);
+  padding: 0.2rem 0rem;
+}
+
+.footerLink::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #4e4c4c;
+  transition: all 0.5s ease;
+}
+
+.footerLink:hover::before {
+  width: 100%;
+}
+
+.logoTxt {
+  font: 500 4rem var(--medium);
+  color: var(--website);
+}
+
+.logoTxt + p {
+  color: var(--light-black);
+
+  font: 400 1.4rem var(--medium);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  padding: 1.5rem 0rem;
+}
+
+.socials > a {
+  position: relative;
+  padding: 0.5rem 0.7rem;
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.8rem rgba(28, 28, 28, 0.08);
+  border: 0.1rem solid #e8e8e8;
+  transition: all 0.5s ease;
+}
+
+.socials > a > img {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  vertical-align: middle;
+}
+
+.socials > a:hover {
+  transform: translateY(-50%);
+}
+
+.paymentMethods,
+.paymentPortals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.paymentMethods > p {
+  color: var(--light-black);
+  font: 400 1.4rem var(--medium);
+  margin-right: 2.2em;
+}
+.paymentMethods {
+  width: 100%;
+  padding: 1rem;
+}
+
+.paymentPortals {
+  width: 30%;
+}
+
+.paymentPortals > img {
+  height: 5rem;
+  width: 5rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .navbar,
+  .nestedFooter,
+  main {
+    max-width: 114rem;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .navbar,
+  .nestedFooter,
+  main {
+    max-width: 96rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar,
+  .nestedFooter,
+  main {
+    max-width: 72rem;
+  }
+  .searchHolder {
+    display: none;
+  }
+  .footerLinks,
+  .paymentMethods {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footerLinks > div {
+    width: 45%;
+  }
+  .paymentPortals {
+    width: 100%;
+  }
+
+  .questions {
+    padding: 1rem 0rem;
+  }
+
+  .answers {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    max-width: 54rem;
+  }
+  .navbar,
+  .nestedFooter {
+    max-width: 54rem;
+    padding: 1rem 1rem 0rem;
+  }
+
+  .search > div {
+    width: 100%;
+  }
+  .navbarLinks a,
+  .dynamicLinks,
+  .navbarLinks,
+  .flex1 {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+
+  .locationBtn,
+  .logo {
+    margin-right: 0em;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
