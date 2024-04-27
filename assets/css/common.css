@@ -177,6 +177,31 @@ main {
   border-color: var(--website);
 }
 
+/* Breadcrumbs */
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+
+  padding: 1rem;
+}
+
+.breadCrumbs > a {
+  color: var(--website);
+  font: 400 1.4rem var(--medium);
+}
+
+.breadCrumbs > p {
+  color: var(--light-black);
+  font: 400 1.4rem var(--medium);
+}
+
+.breadCrumbs > p::before {
+  content: ">";
+  margin-right: 0.5rem;
+}
+
 /* Product */
 .link {
   height: auto;
@@ -245,6 +270,8 @@ main {
   height: auto;
   width: 100%;
   padding: 1rem;
+
+  background-color: var(--white);
 }
 
 .seoContent > h1 {

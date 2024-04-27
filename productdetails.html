@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7eventzz Product Details</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/productdetails.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <button class="menuBtn">
+            <img
+              src="/assets/icons/menu.svg"
+              alt="menu icon"
+              height="25"
+              width="25"
+            />
+          </button>
+          <a href="/">7eventzz</a>
+        </div>
+        <button class="locationBtn">
+          <image
+            src="/assets/icons/navigation.svg"
+            alt=" navigation icon"
+            height="25"
+            width="25"
+          />
+          Select Location
+        </button>
+        <div class="searchHolder">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="flex1"></div>
+        <div class="navbarLinks">
+          <a href="#">
+            <img
+              src="/assets/icons/user.svg"
+              alt="user icon"
+              height="20"
+              width="20"
+            />
+            <span>Hello, Log in</span>
+          </a>
+          <a href="#">
+            <img
+              src="/assets/icons/cart.svg"
+              alt="cart icon"
+              height="20"
+              width="20"
+            />
+            <span>Cart</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="dynamicLinks">
+      <a href="#">Kids</a>
+      <a href="#">Coupels</a>
+      <a href="#">Occasion</a>
+      <a href="#">Welcome</a>
+      <a href="#">Birthday</a>
+    </div>
+    <main>
+      <div class="breadCrumbs">
+        <a href="index.html">Home</a>
+        <p>Category</p>
+        <p>Chocolate Truffle Cake</p>
+      </div>
+      <section class="container">
+        <div class="productImages">
+          <div id="slider" class="slider">
+            <div class="wrapper">
+              <div class="slides" id="slides">
+                <span class="slide">
+                  <img
+                    src="assets/images/pr1.webp"
+                    alt="product image"
+                    height="50"
+                    width="50" /></span
+                ><span class="slide"
+                  ><img
+                    src="assets/images/pr2.webp"
+                    alt="product image"
+                    height="50"
+                    width="50" /></span
+                ><span class="slide"
+                  ><img
+                    src="assets/images/pr3.webp"
+                    alt="product image"
+                    height="50"
+                    width="50"
+                /></span>
+              </div>
+            </div>
+            <div class="pagination" id="pagination"></div>
+            <button class="view-similar-btn" onclick="viewSimilar()">
+              View Similar
+              <img
+                src="assets/icons/ai_suggest.svg"
+                alt="ai search icon"
+                height="20"
+                width="20"
+              />
+            </button>
+            <a id="prev" class="prev">
+              <img
+                src="/assets/icons/chevron-left.svg"
+                alt="chevron prev "
+                height="25"
+                width="25"
+              />
+            </a>
+            <a id="next" class="next">
+              <img
+                src="/assets/icons/chevron-right.svg"
+                alt="chevron right"
+                height="25"
+                width="25"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="product-details">
+          <div class="detailsContainer">
+            <h1 class="product-name">Chocolate Truffle Cake</h1>
+            <div class="priceContainer">
+              <div class="priceContain">
+                <p class="product-price">₹1999</p>
+                <div>
+                  <span class="prevPrice">2499</span>
+                  <span class="discount">20% OFF</span>
+                  <p>Inclusive of all taxes</p>
+                </div>
+              </div>
+              <p class="text">
+                <span class="rating">&#9733; 4.8</span>
+                <span class="reviews">545 Reviews</span>
+              </p>
+            </div>
+          </div>
+          <div class="detailsContainer">
+            <div class="inputController">
+              <p class="controller-heading">
+                <img
+                  src="assets/icons/red_location.svg"
+                  alt="location icon"
+                  height="25"
+                  width="25"
+                />Delivery Location <span class="animate">Select City</span>
+              </p>
+              <button class="btn">Select your city</button>
+              <div class="dateNtime">
+                <div>
+                  <p class="controller-heading">
+                    <img
+                      src="assets/icons/red_calendar.svg"
+                      alt="location icon"
+                      height="25"
+                      width="25"
+                    />Select Date
+                  </p>
+                  <select name="booking-dates" id="booking-dates" class="btn">
+                    <option selected disabled>Select Date</option>
+                  </select>
+                </div>
+                <div>
+                  <p class="controller-heading">
+                    <img
+                      src="assets/icons/clock.svg"
+                      alt="clock icon"
+                      height="25"
+                      width="25"
+                    />Select Time
+                  </p>
+                  <select name="time-slots" id="time-slots" class="btn">
+                    <option selected disabled>Select Time</option>
+                    <option value="6amto8am">06:00 AM - 08:00 AM</option>
+                    <option value="8amto10am">08:00 AM - 10:00 AM</option>
+                    <option value="10amto12pm">10:00 AM - 12:00 PM</option>
+                    <option value="12pmto2pm">12:00 AM - 02:00 PM</option>
+                    <option value="2pmto4pm">02:00 AM - 04:00 PM</option>
+                    <option value="4pmto6pm">04:00 AM - 06:00 PM</option>
+                    <option value="6pmto8pm">06:00 AM - 08:00 PM</option>
+                    <option value="8pmto10pm">08:00 AM - 10:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detailsContainer stick-bottom">
+            <div class="bookings">
+              <a href="https://wa.me/8240590169" class="whatsapp-btn"
+                ><img
+                  src="/assets/icons/whatsapp-icon.svg"
+                  alt="whatsapp-icon"
+                  height="25"
+                  width="25"
+                />
+                Whatsapp</a
+              >
+
+              <div class="floating-price">
+                <span class="floating-before-price">₹2499</span>
+                <span class="floating-current-price">₹1999</span>
+                <button id="go-inclusion">
+                  View Package Inclusion <span>*</span>
+                </button>
+              </div>
+
+              <button class="booknow-btn">
+                <img
+                  src="/assets/icons/white-cart-icon.svg"
+                  alt="cart-icon"
+                  height="25"
+                  width="25"
+                />
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="detailsContainer">
+            <div class="inclusion-exclusion-holder">
+              <button
+                class="inclusion active"
+                onclick="activeInclusion(`inclusion`)"
+              >
+                Inclusion
+                <img
+                  src="assets/icons/included.webp"
+                  alt="included icon"
+                  height="25"
+                  width="25"
+                />
+              </button>
+              <button class="exclusion" onclick="activeInclusion(`exclusion`)">
+                Exclusion
+                <img
+                  src="assets/icons/excluded.webp"
+                  alt="excluded icon"
+                  height="25"
+                  width="25"
+                />
+              </button>
+            </div>
+            <div class="inclusion-exclusion-container">
+              <ul class="inclusion-content">
+                <li>Round stand with happy birthday neon light</li>
+                <li>Round stand decorated with 200 balloons</li>
+                <li>5 mini star foil balloon</li>
+                <li>2 star foil on balloon pillar contain 20 balloons each</li>
+                <li>20 balloons on floor</li>
+                <li>name foil letter balloon (upto 7 letters)</li>
+              </ul>
+              <ul class="exclusion-content">
+                <li>Ring Light</li>
+                <li>Table</li>
+                <li>Chair</li>
+              </ul>
+            </div>
+          </div>
+          <div class="detailsContainer">
+            <div class="cancellation-policy">
+              <p>Cancellation Policy</p>
+            </div>
+            <div class="inclusion-exclusion-container">
+              <ul>
+                <li>
+                  If cancellations are made 1 day or more days before the start
+                  date of the booking, you will not be charged and the booking
+                  payment will be refunded within 2 days.
+                </li>
+                <li>
+                  If cancellations are made on same day of the start date of the
+                  booking, 100% of the advance payment will be charged as
+                  cancellation fees.
+                </li>
+                <li>
+                  In case of unforeseen weather conditions or government
+                  restrictions, certain activities may be cancelled and in such
+                  case we will refund the advance money.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="detailsContainer">
+            <h2 class="rating-header">Rating</h2>
+            <div class="reviews-content">
+              <div class="ratingPoint">
+                <p>
+                  4.9
+                  <img
+                    src="/assets/icons/green-star.svg"
+                    alt="green star icon"
+                    height="25"
+                    width="25"
+                  />
+                </p>
+              </div>
+              <div class="ratingNumbers">
+                <p>369 Ratings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="similar-products">
+        <h2>Similar Products</h2>
+        <button onclick="movePrev()" class="similar-prev">
+          <img
+            src="/assets/icons/chevron-left.svg"
+            alt="chevron icon"
+            height="25"
+            width="25"
+          />
+        </button>
+        <button onclick="moveNext()" class="similar-next">
+          <img
+            src="/assets/icons/chevron-right.svg"
+            alt="chevron icon"
+            height="25"
+            width="25"
+          />
+        </button>
+        <div class="similar-products-slider">
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/p1.webp"
+                alt="cake image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Sumptuous Chocolate Truffle Cake</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/p2.webp"
+                alt="cake image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Love You Chocolate Truffle Cake</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/p3.webp"
+                alt="cake image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Choco Truffle Heart Cake</p>
+            <div class="details">
+              <span class="price">&#x20B9; 800</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(20% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/p4.webp"
+                alt="cake image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Dense Chocolate Delight Cake</p>
+            <div class="details">
+              <span class="price">&#x20B9; 750</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/f1.webp"
+                alt="Flowers image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">10 Red Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/f2.webp"
+                alt="Flowers image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Paradise Mixed Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/f3.webp"
+                alt="Flowers image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Eternity White Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 800</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(20% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/f4.webp"
+                alt="Flowers image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Crimson Floral Embrace</p>
+            <div class="details">
+              <span class="price">&#x20B9; 750</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/g1.webp"
+                alt="Gift image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">10 Red Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/g2.webp"
+                alt="Gift image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Paradise Mixed Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 600</span>
+              <span class="beforePrice">&#x20B9; 800</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/g3.webp"
+                alt="Gift image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Eternity White Roses Bouquet</p>
+            <div class="details">
+              <span class="price">&#x20B9; 800</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(20% Off)</span>
+            </div>
+          </a>
+          <a href="productdetails.html" class="link">
+            <div class="imageHolder">
+              <img
+                src="/assets/images/g4.webp"
+                alt="Gift image"
+                height="50"
+                width="50"
+                loading="eager"
+              />
+            </div>
+            <p class="productName">Crimson Floral Embrace</p>
+            <div class="details">
+              <span class="price">&#x20B9; 750</span>
+              <span class="beforePrice">&#x20B9; 1000</span>
+              <span class="discount">(25% Off)</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <div class="modal-holder">
+        <div class="modal" onclick="viewSimilar()" />
+        <div class="view-similar-container">
+          <div class="view-similar-heading">
+            <h2>
+              <img
+                src="/assets/icons/ai_suggest.svg"
+                alt="ai image"
+                height="30"
+                width="30"
+              />
+              Similar To
+            </h2>
+            <p>Similar to your selected Products</p>
+          </div>
+          <button class="close-view-similar" onclick="viewSimilar()">✕</button>
+          <div class="view-similar-products">
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/p1.webp"
+                  alt="cake image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Sumptuous Chocolate Truffle Cake</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/p2.webp"
+                  alt="cake image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Love You Chocolate Truffle Cake</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/p3.webp"
+                  alt="cake image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Choco Truffle Heart Cake</p>
+              <div class="details">
+                <span class="price">&#x20B9; 800</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(20% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/p4.webp"
+                  alt="cake image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Dense Chocolate Delight Cake</p>
+              <div class="details">
+                <span class="price">&#x20B9; 750</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/f1.webp"
+                  alt="Flowers image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">10 Red Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/f2.webp"
+                  alt="Flowers image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Paradise Mixed Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/f3.webp"
+                  alt="Flowers image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Eternity White Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 800</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(20% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/f4.webp"
+                  alt="Flowers image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Crimson Floral Embrace</p>
+              <div class="details">
+                <span class="price">&#x20B9; 750</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/g1.webp"
+                  alt="Gift image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">10 Red Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/g2.webp"
+                  alt="Gift image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Paradise Mixed Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 600</span>
+                <span class="beforePrice">&#x20B9; 800</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/g3.webp"
+                  alt="Gift image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Eternity White Roses Bouquet</p>
+              <div class="details">
+                <span class="price">&#x20B9; 800</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(20% Off)</span>
+              </div>
+            </a>
+            <a href="productdetails.html" class="link">
+              <div class="imageHolder">
+                <img
+                  src="/assets/images/g4.webp"
+                  alt="Gift image"
+                  height="50"
+                  width="50"
+                  loading="eager"
+                />
+              </div>
+              <p class="productName">Crimson Floral Embrace</p>
+              <div class="details">
+                <span class="price">&#x20B9; 750</span>
+                <span class="beforePrice">&#x20B9; 1000</span>
+                <span class="discount">(25% Off)</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="nestedFooter">
+        <div class="footerLinks">
+          <div>
+            <h2 class="footerHeading">Company</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">About Us</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Contact Us</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Decorations</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Our Impact</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Carrers</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="footerHeading">Privacy</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Terms & Conditions</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Privacy Policy</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Terms of Use</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Disclaimer</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="footerHeading">Partners</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Register as a Vendor</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Franchise</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="logoTxt">7eventzz</h2>
+            <p>Follow Us</p>
+            <div class="socials">
+              <a href="#"
+                ><img
+                  src="/assets/icons/facebook_logo.webp"
+                  alt="facebook"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/twitter_logo.webp"
+                  alt="twitter"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/instagram_logo.webp"
+                  alt="instagram"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/youtube_logo.webp"
+                  alt="youtube"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/linkdin_logo.webp"
+                  alt="linkedin"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/pinterest_logo.webp"
+                  alt="pinterest"
+                  height="25"
+                  width="25"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="paymentMethods">
+          <div class="paymentPortals">
+            <img
+              src="/assets/icons/visa.webp"
+              alt="Visa"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/mastercard.webp"
+              alt="Master Card"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/american_express.webp"
+              alt="American Express"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/google_pay.webp"
+              alt="Google Pay"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+          </div>
+          <p>&copy; 2024 7eventzz.com - All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script defer src="/assets/js/script.js"></script>
+  </body>
+</html>
