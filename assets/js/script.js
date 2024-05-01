@@ -204,3 +204,7 @@ function movePrev() {
 function viewSimilar() {
   document.querySelector(".modal-holder").classList.toggle("block");
 }
+
+function viewAddon() {
+  document.querySelector(".addon-modal").classList.toggle("block");
+}

@@ -210,7 +210,7 @@
                 </button>
               </div>
 
-              <button class="booknow-btn">
+              <button class="booknow-btn" onclick="viewAddon()">
                 <img
                   src="/assets/icons/white-cart-icon.svg"
                   alt="cart-icon"
@@ -534,7 +534,7 @@
         </div>
       </section>
       <div class="modal-holder">
-        <div class="modal" onclick="viewSimilar()" />
+        <div class="modal" onclick="viewSimilar()"></div>
         <div class="view-similar-container">
           <div class="view-similar-heading">
             <h2>
@@ -756,6 +756,184 @@
                 <span class="discount">(25% Off)</span>
               </div>
             </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="addon-modal">
+        <div class="modal" onclick="viewAddon()"></div>
+        <div class="addon-container">
+          <div class="heading-container">
+            <p class="addon-heading">Add on something to make it special!</p>
+            <span class="close-addon" onclick="viewAddon()"> &#x2715; </span>
+          </div>
+          <div class="addon-categories">
+            <button class="active-addon">All</button>
+            <button>Flowers</button>
+            <button>Cakes</button>
+            <button>Plates</button>
+          </div>
+          <div class="addon-items">
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon1.webp"
+                  alt="add on 1 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">Magic Candles</p>
+              <p class="addon-item-price">₹59</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon2.webp"
+                  alt="add on 2 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">Forever Love Greeting Card</p>
+              <p class="addon-item-price">₹129</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon3.webp"
+                  alt="add on 3 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">6 Red Roses Bunch</p>
+              <p class="addon-item-price">₹385</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon4.webp"
+                  alt="add on 4 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">Birthday Card</p>
+              <p class="addon-item-price">₹129</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon5.webp"
+                  alt="add on 5 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">10 Inch Puppy Love Teddy</p>
+              <p class="addon-item-price">₹459</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon6.webp"
+                  alt="add on 6 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">
+                Two Hersheys Milk Chocolates Each 33 gm
+              </p>
+              <p class="addon-item-price">₹299</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+            <div class="addon-item">
+              <div class="addon-image">
+                <img
+                  src="assets/images/addon7.webp"
+                  alt="add on 7 image"
+                  height="50"
+                  width="50"
+                />
+              </div>
+              <p class="addon-item-name">Single Red Rose</p>
+              <p class="addon-item-price">₹149</p>
+
+              <div class="addon-item-controller">
+                <div class="addon-item-btns">
+                  <button class="addon-item-btn">&#8722;</button>
+                  <span class="addon-count">0</span>
+                  <button class="addon-item-btn">&#43;</button>
+                </div>
+                <button class="add-addon-btn">ADD</button>
+              </div>
+            </div>
+          </div>
+          <div class="addon-pricing">
+            <div class="all-prices">
+              <p class="price-text"><b>Base Price:</b> ₹770</p>
+              <p class="price-text"><b>Addon Price:</b> ₹0</p>
+              <p class="price-text"><b>Total Price:</b> ₹770</p>
+            </div>
+            <div class="addon-controllers">
+              <a href="cart.html" class="skip-btn"> Skip </a>
+              <a href="cart.html" class="proceed-btn"> Proceed </a>
+            </div>
           </div>
         </div>
       </div>

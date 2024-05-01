@@ -545,7 +545,8 @@
   }
 }
 
-.modal-holder {
+.modal-holder,
+.addon-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -574,7 +575,7 @@
   position: absolute;
   top: 0;
   right: 0;
-
+  z-index: 999999;
   height: 100vh;
   width: 30%;
 
@@ -638,6 +639,278 @@
   transition: all 0.5s ease;
 }
 
+/* addon */
+
+.addon-container {
+  position: fixed;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: auto;
+  width: 80%;
+
+  background-color: #fff;
+  border-radius: 2rem;
+  animation: fadeIn 0.5s ease 0s 1 forwards;
+  z-index: 9999;
+
+  border-radius: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    top: 150%;
+  }
+  to {
+    top: 50%;
+  }
+}
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  background-color: #f0f7f9;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.addon-heading {
+  color: var(--light-black);
+  font: 500 2.5rem var(--medium);
+}
+
+.close-addon {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.addon-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15%, 2fr));
+  gap: 2rem;
+
+  height: 65vh;
+  width: 100%;
+
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+
+  background-color: #fff;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  transition: all ease 0.5s;
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.addon-items::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+.addon-items::-webkit-scrollbar-thumb {
+  background-color: #2828281e;
+
+  border-radius: 1rem;
+}
+
+.addon-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  width: 100%;
+
+  padding: 2rem;
+}
+
+.all-prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.price-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font: 400 1.7rem var(--medium);
+}
+
+.addon-controllers {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.proceed-btn {
+  padding: 1rem 2.5rem;
+
+  color: var(--white);
+
+  font: 500 2rem var(--medium);
+
+  background-color: var(--website);
+  border-radius: 1rem;
+}
+
+.skip-btn {
+  color: var(--light-black);
+
+  font: 400 1.5rem var(--medium);
+}
+
+.addon-categories {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  width: 100%;
+
+  padding: 1rem 2rem;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: all ease 0.5s;
+}
+
+.addon-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.addon-categories button {
+  min-width: 10rem;
+
+  padding: 0.5rem 0rem;
+
+  color: var(--grey);
+
+  font: 500 1.5rem var(--medium);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.2rem solid #d6d1d1;
+  cursor: pointer;
+
+  transition: all ease 0.5s;
+}
+
+.addon-categories button:hover {
+  color: var(--website);
+  border-color: var(--website);
+}
+
+.addon-categories button.active-addon {
+  color: var(--website);
+  border-color: var(--website);
+}
+
+/* add item carousel */
+.addon-item {
+  height: auto;
+  width: 100%;
+}
+
+.addon-image {
+  height: auto;
+  width: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.addon-image > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.addon-item-name {
+  padding: 0.5rem;
+
+  color: #212121;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.addon-item-price {
+  padding: 0rem 0.5rem 0.5rem;
+
+  color: #000;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.addon-item-controller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+}
+
+.addon-item-btns {
+  display: flex;
+  align-items: center;
+}
+
+.addon-item-btn {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  font-size: 2rem;
+
+  text-align: center;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.addon-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2.5rem;
+  width: 4rem;
+
+  font-size: 1.7rem;
+  background-color: #f3f7f8;
+}
+
+.add-addon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+
+  padding: 0.4rem 0.6rem;
+
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 500;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+
+.add-addon-added {
+  color: #4caf50;
+  border-color: #4caf50;
+}
+
 @media only screen and (max-width: 1250px) {
   .view-similar-container {
     width: 40%;
@@ -655,6 +928,10 @@
     align-items: center;
     flex-direction: column;
   }
+
+  .addon-items {
+    grid-template-columns: repeat(auto-fit, minmax(20%, 2fr));
+  }
 }
 @media only screen and (max-width: 992px) {
   :root {
@@ -669,12 +946,15 @@
   .view-similar-container {
     width: 50%;
   }
+
+  .addon-items {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 2fr));
+  }
+  .all-prices {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 768px) {
-  .view-similar-container {
-    top: 0;
-    left: 0;
-  }
   .stick-bottom {
     position: fixed;
     bottom: 0;
@@ -749,12 +1029,74 @@
 
   @keyframes similarFadeIn {
     from {
-      left: 0%;
-      top: 0%;
+      top: 150%;
     }
     to {
       top: 50%;
     }
+  }
+
+  .addon-container {
+    height: 100vh;
+    width: 100%;
+
+    border-radius: 0rem;
+
+    transform: none;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  @keyframes fadeIn {
+    from {
+      top: 150%;
+    }
+    to {
+      top: 0%;
+    }
+  }
+
+  .heading-container {
+    border-radius: 0rem;
+    padding: 4rem 2rem 1rem;
+  }
+
+  .addon-heading {
+    font-size: 2rem;
+  }
+
+  .addon-items {
+    height: 60vh;
+  }
+
+  .addon-pricing {
+    flex-wrap: wrap;
+  }
+
+  .all-prices,
+  .addon-controllers {
+    width: 100%;
+  }
+
+  .all-prices {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+
+  .addon-controllers {
+    justify-content: flex-end;
+
+    margin-top: 1.3rem;
+  }
+
+  .price-text {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .proceed-btn {
+    width: 50%;
+    text-align: center;
   }
 }
 
@@ -801,5 +1143,10 @@
   }
   .detailsContainer {
     padding: 2.8rem 1rem 0rem 1rem;
+  }
+
+  .addon-items {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 2fr));
+    gap: 1rem;
   }
 }
