@@ -470,7 +470,7 @@
               </button>
             </div>
 
-            <button>Proceed To Buy</button>
+            <button onclick="viewSignin()">Proceed To Buy</button>
           </div>
           <div class="assurance-container">
             <div class="assurance">
@@ -716,7 +716,7 @@
       </div>
 
       <div class="sign-in-modal">
-        <div class="modal"></div>
+        <div class="modal" onclick="viewSignin()"></div>
 
         <div class="sign-in-dialogue">
           <h2>Sign up / Sign in</h2>
@@ -724,6 +724,15 @@
             Enjoy the convenience of a single account across all participating
             brands
           </p>
+
+          <button class="close-signin" onclick="viewSignin()">
+            <img
+              src="assets/icons/close.svg"
+              alt="close icon"
+              height="25"
+              width
+            />
+          </button>
 
           <div class="signin-form-holder">
             <form class="signin-form" id="first-form">
@@ -750,6 +759,7 @@
                   width="20"
                   class="input-expressions hidden wrong-name"
                 />
+                <p class="wrong-name hidden">*Incorrect name detected</p>
               </div>
               <label for="number">Mobile Number</label>
 
@@ -783,6 +793,41 @@
                 By creating your account you agree to our
                 <a href="#">Terms & Conditions </a>
               </p>
+              <button type="submit">Next</button>
+            </form>
+            <form class="signin-form hidden" id="second-form">
+              <label for="password">Create Password</label>
+              <div class="input-fields">
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                  name="password"
+                  id="password"
+                />
+                <img
+                  src="assets/icons/eye-slash.svg"
+                  alt="eye slash icon"
+                  height="20"
+                  width="20"
+                  class="password-view"
+                />
+                <img
+                  src="assets/icons/green-check-icon.svg"
+                  alt="green-check-icon"
+                  height="20"
+                  width="20"
+                  class="input-expressions hidden correct-password"
+                />
+                <img
+                  src="assets/icons/red-close-icon.svg"
+                  alt="green-check-icon"
+                  height="20"
+                  width="20"
+                  class="input-expressions hidden wrong-number"
+                />
+                <p class="wrong-password">*Minimum 6 characters required</p>
+              </div>
               <button type="submit">Next</button>
             </form>
           </div>

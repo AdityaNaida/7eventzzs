@@ -1303,7 +1303,6 @@ main {
 }
 
 .input-expressions {
-  /* display: none; */
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
@@ -1338,14 +1337,24 @@ main {
   cursor: pointer;
 }
 
-.wrong-number {
+.wrong-number,
+.wrong-name {
   color: var(--discount);
+  font: 400 1.4rem var(--medium);
+}
+
+.wrong-password {
+  color: var(--light-black);
   font: 400 1.4rem var(--medium);
 }
 
 .wrong-input {
   border: 0.1rem solid var(--discount) !important;
   animation: errorEffect 0.5s linear 0s 1 forwards;
+}
+
+.correct-input {
+  border: 0.1rem solid #47b376 !important;
 }
 
 @keyframes errorEffect {
@@ -1367,6 +1376,43 @@ main {
 
   to {
     transform: translateX(0);
+  }
+}
+.close-signin {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-signin > img {
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+}
+
+.signup-fadeout {
+  animation: signup-fadeout 0.5s ease 0s 1 forwards;
+}
+
+.password-view {
+  position: absolute;
+  right: 4rem;
+  top: 1.3rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+@keyframes signup-fadeout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+    display: none;
   }
 }
 @media only screen and (max-width: 1250px) {
@@ -1442,6 +1488,10 @@ main {
   .instruction-dialouge {
     width: 50%;
   }
+
+  .sign-in-dialogue {
+    width: 50%;
+  }
 }
 @media only screen and (max-width: 768px) {
   main,
@@ -1504,6 +1554,10 @@ main {
 
   .instruction-controllers > button:last-child {
     padding: 0.5rem 1rem;
+  }
+
+  .sign-in-dialogue {
+    width: 60%;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -1586,6 +1640,29 @@ main {
 
   .instruction-dialouge > form > textarea {
     height: 30vh;
+  }
+
+  .sign-in-dialogue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 99;
+  }
+
+  @keyframes signupFadein {
+    0% {
+      top: 150%;
+    }
+
+    to {
+      top: 0;
+    }
   }
 }
 @media only screen and (max-width: 500px) {
