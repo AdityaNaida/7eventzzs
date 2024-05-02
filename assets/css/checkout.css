@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--light);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  content-visibility: auto;
+}
+
+:root {
+  --website: #ff385c;
+  --discount: #f11a00;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #848484;
+  --light-black: #212121;
+  --light: "Nunito-Light", sans-serif;
+  --medium: "Nunito-Medium", sans-serif;
+  --bold: "Nunito-Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/Nunito-Light.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-Medium";
+  src: url("../fonts/Nunito-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito-Bold.ttf");
+}
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem 0rem;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 120rem;
+
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.checkout-text {
+  color: var(--black);
+
+  font: 550 2em var(--medium);
+}
+
+.checkout-text img {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.checkout-text span {
+  color: #929391;
+  font-weight: 600;
+}
+
+.navbar-text {
+  color: var(--light-black);
+
+  font: 600 1.5rem var(--medium);
+
+  margin-bottom: 1rem;
+}
+
+.navbar-text img {
+  height: 3rem;
+  width: 3rem;
+
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.whatsapp-btn {
+  margin-right: 1.5rem;
+
+  color: var(--light-black);
+  font: 500 1.5rem var(--medium);
+
+  border-radius: 1rem;
+}
+
+.whatsapp-btn > img {
+  height: 2rem;
+  width: 2rem;
+
+  vertical-align: middle;
+}
+
+/* main */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.input-fields {
+  width: 60%;
+}
+
+.checkout-payment {
+  width: 38%;
+}
+
+/* Steps */
+
+.steps-container {
+  height: auto;
+  padding: 1rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.steps-container > p {
+  color: var(--black);
+  font: 500 2rem var(--medium);
+}
+.steps-count {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 1rem 0rem;
+}
+.steps-ruler {
+  position: absolute;
+  height: 0.1rem;
+  width: 98%;
+  top: 50%;
+  right: 0rem;
+
+  border-bottom: 0.3rem dotted #867b7b4b;
+}
+
+.step-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: var(--white);
+  z-index: 2;
+
+  padding: 0rem 1rem;
+}
+.step-box > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 0.2rem solid #ccc;
+  color: var(--white);
+}
+
+.step-box > p {
+  font: 400 1.5rem var(--medium);
+  color: var(--light);
+  text-align: right;
+}
+.step-box > span.active-step {
+  border-color: var(--website);
+  border-width: 0.3rem;
+  animation: drop 1s ease 0s 1 forwards;
+}
+
+.step-box > span.active-step + p {
+  font-weight: 600;
+}
+@keyframes drop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stepBox > p {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #282828;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1250px) {
+  main,
+  .navbar {
+    max-width: 114rem;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  main,
+  .navbar {
+    max-width: 96rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+
+  main,
+  .navbar {
+    max-width: 72rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main,
+  .navbar {
+    max-width: 54rem;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+  .steps-container > p {
+    display: none;
+  }
+  .input-fields,
+  .checkout-payment,
+  .steps-count {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+}

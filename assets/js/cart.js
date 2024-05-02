@@ -35,7 +35,6 @@ try {
         }
         document.querySelector("#number").classList.add("wrong-input");
       }
-
       if (name.length < 3) {
         for (wrongname of document.querySelectorAll(".wrong-name")) {
           wrongname.classList.remove("signup-fadeout");
@@ -114,7 +113,7 @@ document.querySelector("#second-form").addEventListener("submit", function (e) {
       wp.classList.remove("hidden");
     }
   } else {
-    window.location.href = "index.html";
+    window.location.href = "checkout.html";
   }
 });
 
