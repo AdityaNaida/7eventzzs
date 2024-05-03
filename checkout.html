@@ -72,9 +72,281 @@
               </div>
             </div>
           </div>
+          <form action="" method="post" class="checkout-fields">
+            <h2>Checkout</h2>
+            <p>Note: Coupon Code Not Applicable for 50% Advance Payment</p>
+            <div class="input_wrapper">
+              <label for="username">Name <span>*</span></label>
+              <input
+                type="text"
+                placeholder="Enter name"
+                required
+                id="username"
+                name="name"
+              />
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+              <p class="hidden">Invalid Name</p>
+            </div>
+            <div class="input_wrapper">
+              <label for="email_id">Email <span>*</span></label>
+              <input
+                type="text"
+                placeholder="Enter email"
+                required
+                id="email_id"
+                name="email_id"
+              />
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+              <p class="hidden">Invalid Email</p>
+            </div>
+            <div class="input_wrapper">
+              <label for="address">Address <span>*</span></label>
+              <textarea
+                name="address"
+                id="address"
+                cols="30"
+                rows="5"
+                placeholder="Enter address"
+                required
+              ></textarea>
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+              <p class="hidden">Invalid Address</p>
+            </div>
+            <div class="input_wrapper">
+              <label for="land_mark">Land Mark(If any)</label>
+              <input
+                type="text"
+                placeholder="Enter landmark"
+                id="land_mark"
+                name="land_mark"
+              />
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+            </div>
+            <div class="input_wrapper">
+              <label for="pincode">Pincode <span>*</span></label>
+              <input
+                type="tel"
+                placeholder="Enter pincode"
+                required
+                id="pincode"
+                maxlength="6"
+                name="pincode"
+              />
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+              <p class="hidden">Invalid Pincode</p>
+            </div>
+            <div class="input_wrapper">
+              <label for="city">City <span>*</span></label>
+              <input
+                type="text"
+                placeholder="Enter city name"
+                required
+                id="city"
+                name="city_name"
+              />
+              <img
+                src="assets/icons/green-check-icon.svg"
+                alt="green-check-icon"
+                height="20"
+                width="20"
+                class="hidden"
+              />
+              <p class="hidden">Invalid City Name</p>
+            </div>
+            <div class="other-details">
+              <div class="input_wrapper">
+                <label for="occasion">Occasion <span>*</span></label>
+                <select name="occasion" id="occasion" required>
+                  <option selected disabled>Select Decoration Type</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="baby_shower">Baby Shower</option>
+                  <option value="haldi">Haldi</option>
+                  <option value="welcome_baby">Welcome baby</option>
+                </select>
+              </div>
+              <div class="input_wrapper">
+                <label for="location">Location <span>*</span></label>
+                <select name="location" id="location" required>
+                  <option selected disabled>Select Decoration Location</option>
+                  <option value="home">Home</option>
+                  <option value="building">Building</option>
+                  <option value="office">Office</option>
+                </select>
+              </div>
+              <div class="input_wrapper">
+                <label for="mobile_number">Mobile Number <span>*</span></label>
+                <input
+                  type="tel"
+                  placeholder="Enter mobile number"
+                  required
+                  id="mobile_number"
+                  maxlength="10"
+                  name="mobile_number"
+                />
+                <img
+                  src="assets/icons/green-check-icon.svg"
+                  alt="green-check-icon"
+                  height="20"
+                  width="20"
+                  class="hidden"
+                />
+                <p class="hidden">Invalid Number</p>
+              </div>
+              <div class="input_wrapper">
+                <label for="alternative_number"
+                  >Alternative Numver(If Any)</label
+                >
+                <input
+                  type="tel"
+                  placeholder="Enter alternative number"
+                  id="alternative_number"
+                  maxlength="10"
+                  name="alternative_number"
+                />
+                <img
+                  src="assets/icons/green-check-icon.svg"
+                  alt="green-check-icon"
+                  height="20"
+                  width="20"
+                  class="hidden"
+                />
+                <p class="hidden">Invalid Number</p>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="checkout-payment"></div>
+        <div class="checkout-payment">
+          <div class="order-details">
+            <h2>
+              Order Details
+              <img
+                src="assets/icons/order-details-icon.svg"
+                alt="Order details icon"
+                height="25"
+                width="25"
+              />
+            </h2>
+            <div class="all-details">
+              <div class="img-holder">
+                <img
+                  src="assets/images/extra.webp"
+                  alt="product small image"
+                  height="70"
+                  width="70"
+                />
+              </div>
+              <div class="list-details">
+                <h4>Surprise Room Decoration</h4>
+                <p>
+                  <img
+                    src="assets/icons/calendar-icon.svg"
+                    alt="calendar icon"
+                    height="20"
+                    width="20"
+                  />&nbsp; 25 September 2024
+                </p>
+                <p>
+                  <img
+                    src="assets/icons/clock-icon.svg"
+                    alt="clock icon"
+                    height="20"
+                    width="20"
+                  />&nbsp; 06:00 PM - 08:00 PM
+                </p>
+                <p>
+                  <img
+                    src="assets/icons/credit-card.svg"
+                    alt="credit card"
+                    height="20"
+                    width="20"
+                  />&nbsp;Amonut to Pay: ₹18000
+                </p>
+              </div>
+            </div>
+            <div class="payment-controller-wrapper">
+              <div class="payment-options">
+                <p>Payment Options</p>
+                <div>
+                  <input
+                    type="radio"
+                    id="half"
+                    name="payment_option"
+                    onchange="halfPrice()"
+                  />
+                  <label for="half">50%</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="full"
+                    name="payment_option"
+                    checked
+                    onchange="fullPrice()"
+                  />
+                  <label for="full">100%</label>
+                </div>
+              </div>
+              <a href="index.html"
+                >Proceed to Pay | ₹<span id="total_ammount">18000</span>
+              </a>
+              <p>
+                100% Safe & Secure Payments
+                <img
+                  src="assets/icons/verified-payment.webp"
+                  alt="verified payments"
+                  height="15"
+                  width="15"
+                />
+              </p>
+            </div>
+          </div>
+          <div class="payment-details">
+            <h2>Price Details</h2>
+            <p><span>Base Total</span> <b>₹ 1800</b></p>
+            <p><span>Add On Total</span> <b>₹ 600</b></p>
+            <p>
+              <span>Delivery <samp class="delivery-type">Evening</samp></span>
+              <b>₹ 600</b>
+            </p>
+            <p><span>Total Amount</span> <b>₹ 3000</b></p>
+            <p><span>Coupen Discount</span> <b>-</b></p>
+            <p><b>Amount To Pay</b> <b>₹ 3000</b></p>
+          </div>
+        </div>
       </div>
     </main>
+
+    <script defer src="assets/js/checkout.js"></script>
   </body>
 </html>
