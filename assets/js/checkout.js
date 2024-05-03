@@ -82,7 +82,7 @@ const landMark = document.querySelector("#land_mark");
 const landMarkCorrect = document.querySelector("#land_mark + img");
 landMark.addEventListener("input", function () {
   const landMarkVal = this.value.trim();
-  if (landMarkVal >= 3) {
+  if (landMarkVal.length >= 3) {
     landMark.classList.add("correct-input");
     landMarkCorrect.classList.remove("hidden");
   } else {
