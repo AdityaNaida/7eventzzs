@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 page not found</title>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/404.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <button class="menuBtn">
+            <img
+              src="/assets/icons/menu.svg"
+              alt="menu icon"
+              height="25"
+              width="25"
+            />
+          </button>
+          <a href="/">7eventzz</a>
+        </div>
+        <button class="locationBtn" onclick="viewCityPopup()">
+          <image
+            src="./assets/icons/navigation.svg"
+            alt=" navigation icon"
+            height="25"
+            width="25"
+          />
+          Select Location
+        </button>
+        <div class="searchHolder">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="flex1"></div>
+        <div class="navbarLinks">
+          <a href="#">
+            <img
+              src="/assets/icons/user.svg"
+              alt="user icon"
+              height="20"
+              width="20"
+            />
+            <span>Hello, Log in</span>
+          </a>
+          <a href="#">
+            <img
+              src="/assets/icons/cart.svg"
+              alt="cart icon"
+              height="20"
+              width="20"
+            />
+            <span>Cart</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="dynamicLinks">
+      <a href="#">Kids</a>
+      <a href="#">Coupels</a>
+      <a href="#">Occasion</a>
+      <a href="#">Welcome</a>
+      <a href="#">Birthday</a>
+    </div>
+
+    <main>
+      <div class="container">
+        <img
+          src="assets/icons/404.svg"
+          alt="404 page"
+          height="50"
+          width="50"
+          decoding="async"
+          loading="lazy"
+        />
+
+        <a href="category.html">Exoplore</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="nestedFooter">
+        <div class="footerLinks">
+          <div>
+            <h2 class="footerHeading">Company</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">About Us</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Contact Us</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Decorations</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Our Impact</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Carrers</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="footerHeading">Privacy</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Terms & Conditions</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Privacy Policy</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Terms of Use</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Disclaimer</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="footerHeading">Partners</h2>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Register as a Vendor</a>
+            </div>
+            <div class="linkHolder">
+              <a href="#" class="footerLink">Franchise</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="logoTxt">7eventzz</h2>
+            <p>Follow Us</p>
+            <div class="socials">
+              <a href="#"
+                ><img
+                  src="/assets/icons/facebook_logo.webp"
+                  alt="facebook"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/twitter_logo.webp"
+                  alt="twitter"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/instagram_logo.webp"
+                  alt="instagram"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/youtube_logo.webp"
+                  alt="youtube"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/linkdin_logo.webp"
+                  alt="linkedin"
+                  height="25"
+                  width="25"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/assets/icons/pinterest_logo.webp"
+                  alt="pinterest"
+                  height="25"
+                  width="25"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="paymentMethods">
+          <div class="paymentPortals">
+            <img
+              src="/assets/icons/visa.webp"
+              alt="Visa"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/mastercard.webp"
+              alt="Master Card"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/american_express.webp"
+              alt="American Express"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+            <img
+              src="/assets/icons/google_pay.webp"
+              alt="Google Pay"
+              height="50"
+              width="50"
+              loading="eager"
+            />
+          </div>
+          <p>&copy; 2024 7eventzz.com - All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-wrapper">
+      <div class="modal" onclick="viewCityPopup()"></div>
+      <div class="city-popup">
+        <div class="city-header">
+          <p>
+            <img
+              src="assets/icons/gps.webp"
+              alt="location icon"
+              height="25"
+              width="25"
+            />
+            Select your location
+          </p>
+          <span onclick="viewCityPopup()">✕</span>
+        </div>
+        <div class="city-search">
+          <input type="text" placeholder="Searchg city..." />
+        </div>
+        <div class="city-search-list">
+          <button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Agra</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Ahmedabad</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Amritsar</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Aurangabad</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Bangalore</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Bhopal</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Bhubaneswar</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Coimbatore</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Chandigarh</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Chennai</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Delhi</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Dehradun</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Goa</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Ghaziabad</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Guntur</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Gurugram</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Indore</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Jammu</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Jamshedpur</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Ludhiana</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Hydrabad</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Jaipur</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Kolkata</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            /></button
+          ><button>
+            <span
+              ><img
+                alt="Navigation image"
+                loading="lazy"
+                width="20"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                src="./assets/icons/navigation.svg"
+                style="color: transparent"
+              />Lucknow</span
+            ><img
+              alt="trending image"
+              loading="lazy"
+              width="20"
+              height="20"
+              decoding="async"
+              data-nimg="1"
+              src="./assets/icons/trending.svg"
+              style="color: transparent"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script defer src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+.container {
+  height: auto;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.container > h1 {
+  font: 500 4rem var(--medium);
+  text-align: center;
+}
+
+.container > p {
+  color: #848484;
+  font: 400 1.5rem var(--medium);
+  text-align: center;
+}
+
+.nested-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  padding: 2rem 0rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 65%;
+  padding: 1rem;
+}
+
+.contact-details {
+  width: 35%;
+  padding: 1rem;
+}
+
+.name-holder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.input-fields {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-fields > label {
+  color: #000000b3;
+  font: 400 1.5rem var(--medium);
+}
+
+.input-fields > input,
+.input-fields > textarea {
+  margin-top: 0.8rem;
+  padding: 1.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.2s;
+  font: 400 1.5rem var(--medium);
+}
+
+.input-fields > input[type="number"]::-webkit-inner-spin-button,
+.input-fields > input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+.input-fields > input:focus,
+.input-fields > textarea:focus {
+  outline-color: var(--website);
+}
+
+.submit-btn {
+  align-self: flex-end;
+  white-space: nowrap;
+
+  font: 500 1.74rem var(--medium);
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--website);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.h2 {
+  font: 500 2rem var(--medium);
+}
+
+.para {
+  color: #848484;
+  font: 400 1.5rem var(--medium);
+}
+
+.chat-link {
+  display: inline-block;
+  font: 500 1.5rem var(--medium);
+  margin-top: 2rem;
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.chat-link > img {
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.details-box {
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .nested-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .user-details,
+  .contact-details {
+    width: 100%;
+  }
+
+  .name-holder {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+}

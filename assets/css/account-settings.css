@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  padding: 2rem;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+.container > div:first-child {
+  height: fit-content;
+  width: 25%;
+}
+.menu-links > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem 1rem;
+
+  color: var(--black);
+  font: 500 1.6rem var(--medium);
+  transition: all ease 0.5s;
+}
+
+.menu-links > a:hover,
+.menu-links > a.active-nav {
+  background-color: #ff385d10;
+}
+
+.details {
+  height: auto;
+  width: 73%;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-information {
+  height: auto;
+  width: 100%;
+  padding: 1rem 0rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.personal-information > h2 {
+  font: 500 2.2rem var(--medium);
+  margin-top: 1rem;
+}
+
+.details-form {
+  padding: 2rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+
+.input-fields {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-fields > label {
+  margin: 0rem;
+  color: #000000b3;
+  font: 400 1.5rem var(--medium);
+}
+
+.input-fields > input,
+.input-fields > select {
+  margin-top: 0.8rem;
+  padding: 1.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font: 400 1.5rem var(--medium);
+  transition: all ease-in-out 0.2s;
+}
+
+.input-fields > input[type="number"]::-webkit-inner-spin-button,
+.input-fields > input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+.input-fields > input:focus,
+.input-fields > select:focus {
+  outline-color: var(--website);
+}
+
+.saveBtn {
+  margin-top: 2rem;
+  width: 40%;
+  align-self: flex-end;
+  padding: 1.5rem;
+  font: 500 2rem var(--medium);
+  background-color: var(--website);
+  color: var(--white);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container > div:first-child,
+  .details {
+    width: 100%;
+  }
+  .details {
+    border: none !important;
+    padding: 0rem;
+  }
+
+  .details-form {
+    padding: 2rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .saveBtn {
+    width: 100%;
+  }
+}

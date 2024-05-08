@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  height: 80vh;
+  width: 100%;
+}
+
+.container > img {
+  height: auto;
+  width: 40%;
+}
+
+.container > a {
+  padding: 1rem 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--website);
+  border: 0.2rem solid var(--website);
+  border-radius: 1rem;
+  transition: all ease 0.5s;
+}
+
+.container > a:hover {
+  background-color: var(--website);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 576px) {
+  .container > img {
+    width: 70%;
+  }
+}
