@@ -216,3 +216,29 @@ try {
 function viewCityPopup() {
   document.querySelector(".modal-wrapper").classList.toggle("blocked");
 }
+
+function viewOrderSummary() {
+  document.querySelector(".order-details-modal").classList.toggle("blocked");
+}
+
+function passwordViewer(img) {
+  const password = document.querySelector(".account-password");
+  if (password.type === "password") {
+    password.type = "text";
+    img.src = "../assets/icons/eye.svg";
+  } else {
+    password.type = "password";
+    img.src = "../assets/icons/eye-slash.svg";
+  }
+}
+
+function confirmPasswordViewer(img) {
+  const password = document.querySelector(".confirm-password");
+  if (password.type === "password") {
+    password.type = "text";
+    img.src = "../assets/icons/eye.svg";
+  } else {
+    password.type = "password";
+    img.src = "../assets/icons/eye-slash.svg";
+  }
+}
