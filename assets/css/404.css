@@ -1,35 +1,63 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 3rem;
   height: 80vh;
   width: 100%;
 }
 
-.container > img {
+.errorContent > h1 {
+  color: #484848;
+  font: 600 14rem var(--medium);
+}
+
+.bigParagraph {
+  color: #484848;
+  margin: 2.5rem 0rem 1.5rem 0rem;
+  font: 500 3.2rem var(--light);
+}
+
+.errorText {
+  display: inline-block;
+  color: #f11a00;
+  font: 600 1.5rem var(--medium);
+}
+
+.otherText {
+  color: var(--light-black);
+  margin: 1rem 0rem 1.5rem;
+  font: 400 1.7rem var(--medium);
+}
+
+.linksHolder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.linksHolder > a {
+  color: #008489;
+  font: 400 1.5rem var(--light);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.image {
+  display: block;
   height: auto;
-  width: 40%;
+  width: 80%;
+
+  margin: auto;
 }
 
-.container > a {
-  padding: 1rem 1.5rem;
-  font-size: 1.7rem;
-  font-weight: 500;
-  color: var(--website);
-  border: 0.2rem solid var(--website);
-  border-radius: 1rem;
-  transition: all ease 0.5s;
-}
+@media only screen and (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    height: auto;
 
-.container > a:hover {
-  background-color: var(--website);
-  color: var(--white);
-}
-
-@media only screen and (max-width: 576px) {
-  .container > img {
-    width: 70%;
+    padding: 2rem 1rem;
   }
 }
