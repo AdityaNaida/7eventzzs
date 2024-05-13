@@ -153,15 +153,52 @@ main {
 }
 
 /* Dynamic Links */
-
+.sidemenu-wrapper {
+  position: relative;
+}
 .dynamicLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  z-index: 99;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.user-controlls {
+  position: relative;
+
+  display: none;
+  gap: 1.5rem;
+
+  height: auto;
+  width: 100%;
+  padding: 2rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 
-.dynamicLinks > a {
+.user-controlls > img {
+  height: 5rem;
+  width: 5rem;
+  opacity: 0.7;
+}
+.close-sidemenu {
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.close-sidemenu:active {
+  transform: scale(0.96);
+}
+.dynamicLinks-holder {
+  padding: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+.dynamicLinks-holder > a {
   padding: 0.8rem 1.5rem;
 
   font: 500 1.5em var(--medium);
@@ -171,9 +208,38 @@ main {
   transition: all 0.5s ease;
 }
 
-.dynamicLinks > a:hover {
+.dynamicLinks-holder > a:hover {
   color: var(--website);
   border-color: var(--website);
+}
+
+.name-sign-options > h2 {
+  color: var(--light-black);
+  font: 600 2rem var(--light);
+}
+
+.name-sign-options > p {
+  color: #828282;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 0 0 0.6rem 0.3rem;
+}
+
+.supportsignin-holder > button,
+.supportsignin-holder > a {
+  background-color: #fff;
+  color: var(--website);
+  margin: 1em 0.5em 1em 0.3em;
+  font: 400 1.5rem var(--medium);
+  padding: 0.4rem 1.5rem;
+  border: 0.1rem solid var(--website);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.supportsignin-holder > a {
+  background-color: var(--website);
+  color: #fff;
 }
 
 /* Breadcrumbs */
@@ -344,7 +410,8 @@ main {
   animation: TextAnimation 0.5s ease 0s 1 forwards;
 }
 
-.blocked {
+.blocked,
+.block {
   display: block !important;
 }
 
@@ -609,6 +676,235 @@ footer {
   vertical-align: middle;
 }
 
+/* footer menu*/
+.footer-menu {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  padding: 1.5rem;
+  bottom: 0rem;
+  left: 0rem;
+  background-color: #fff;
+  box-shadow: 0rem -0.7rem 5.8rem 0rem rgba(0, 0, 0, 0.404);
+  -webkit-box-shadow: 0rem -0.7rem 5.8rem 0rem rgba(0, 0, 0, 0.404);
+  -moz-box-shadow: 0rem -0.7rem 5.8rem 0rem rgba(0, 0, 0, 0.404);
+}
+.footer-menu-link {
+  background-color: transparent;
+  border: none;
+}
+.footer-menu-link > img {
+  display: block;
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+
+/* sign up popup */
+.sign-in-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+}
+.sign-in-dialogue {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  height: auto;
+  width: 35%;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  animation: signupFadein 0.5s ease 0s 1 forwards;
+}
+
+@keyframes signupFadein {
+  0% {
+    top: 150%;
+  }
+
+  to {
+    top: 50%;
+  }
+}
+
+.sign-in-dialogue > h2 {
+  color: var(--light-black);
+  font: 500 3rem var(--medium);
+}
+
+.sign-in-dialogue > p {
+  color: var(--grey);
+  font: 400 1.5rem var(--medium);
+}
+
+.signin-form-holder {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+.signin-form {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 2rem 0 1rem;
+}
+
+.signin-form > label {
+  color: var(--black);
+  font: 500 1.6rem var(--medium);
+}
+.input-fields {
+  position: relative;
+}
+.input-fields > input {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+
+  font: 400 1.5rem var(--medium);
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.4rem;
+  outline: none;
+}
+.input-fields > input[type="number"]::-webkit-inner-spin-button,
+.input-fields > input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.input-expressions {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.signin-form > p {
+  color: var(--black);
+  font: 400 1.4rem var(--medium);
+  margin-bottom: 1rem;
+}
+
+.signin-form > p > a {
+  color: var(--website);
+  font-weight: 600;
+}
+
+.signin-form > button {
+  width: 30%;
+  align-self: flex-end;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--website);
+
+  font: 400 1.8rem var(--bold);
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.wrong-number,
+.wrong-name {
+  color: var(--discount);
+  font: 400 1.4rem var(--medium);
+}
+
+.wrong-password {
+  color: var(--light-black);
+  font: 400 1.4rem var(--medium);
+}
+
+.wrong-input {
+  border: 0.1rem solid var(--discount) !important;
+  animation: errorEffect 0.5s linear 0s 1 forwards;
+}
+
+.correct-input {
+  border: 0.1rem solid #47b376 !important;
+}
+
+@keyframes errorEffect {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+.close-signin {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-signin > img {
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+}
+
+.signup-fadeout {
+  animation: signup-fadeout 0.5s ease 0s 1 forwards;
+}
+
+.password-view {
+  position: absolute;
+  right: 4rem;
+  top: 1.3rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+@keyframes signup-fadeout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1250px) {
   .navbar,
   .nestedFooter,
@@ -659,6 +955,10 @@ footer {
   .city-popup {
     width: 45%;
   }
+
+  .sign-in-dialogue {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -675,7 +975,7 @@ footer {
     width: 100%;
   }
   .navbarLinks a,
-  .dynamicLinks,
+  /* .dynamicLinks, */
   .navbarLinks,
   .flex1 {
     display: none;
@@ -694,6 +994,72 @@ footer {
   .city-popup {
     width: 55%;
   }
+
+  .footer-menu,
+  .user-controlls {
+    display: flex;
+  }
+
+  .sign-in-dialogue {
+    width: 60%;
+  }
+
+  .sidemenu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .sidemenu-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 15;
+  }
+  .dynamicLinks {
+    position: absolute;
+    top: 0;
+    left: -90%;
+    height: 100vh;
+    width: 90%;
+    animation: sidemenuFade 0.5s ease 0s forwards;
+  }
+
+  @keyframes sidemenuFade {
+    from {
+      left: -90%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+  .dynamicLinks-holder {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .dynamicLinks-holder > a {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.2rem 0.8rem rgba(28, 28, 28, 0.08);
+    border: 0.1rem solid #e8e8e8;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -710,6 +1076,29 @@ footer {
 
     to {
       top: 68%;
+    }
+  }
+
+  .sign-in-dialogue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 99;
+  }
+
+  @keyframes signupFadein {
+    0% {
+      top: 150%;
+    }
+
+    to {
+      top: 0;
     }
   }
 }

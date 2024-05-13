@@ -242,3 +242,7 @@ function confirmPasswordViewer(img) {
     img.src = "../assets/icons/eye-slash.svg";
   }
 }
+
+function viewSidebar() {
+  document.querySelector(".sidemenu-wrapper").classList.toggle("block");
+}
