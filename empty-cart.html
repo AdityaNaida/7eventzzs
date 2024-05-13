@@ -63,7 +63,9 @@
             alt="home image"
             height="40"
             width="40"
+            class="footer-menu-icon"
           />
+          <span>Home</span>
         </a>
 
         <a href="category.html" class="footer-menu-link">
@@ -72,16 +74,29 @@
             alt="category image"
             height="40"
             width="40"
+            class="footer-menu-icon"
           />
+          <span>Category</span>
         </a>
-
+        <button class="footer-menu-link" onclick="viewSearchbar()">
+          <img
+            src="assets/icons/search.svg"
+            alt="category image"
+            height="40"
+            width="40"
+            class="footer-menu-icon"
+          />
+          <span>Search</span>
+        </button>
         <button class="footer-menu-link" onclick="viewSignin()">
           <img
             src="assets/icons/user.svg"
             alt="category image"
             height="40"
             width="40"
+            class="footer-menu-icon"
           />
+          <span>Sign In</span>
         </button>
         <a href="cart.html" class="footer-menu-link">
           <img
@@ -89,7 +104,9 @@
             alt="cart image"
             height="40"
             width="40"
+            class="footer-menu-icon"
           />
+          <span>Cart</span>
         </a>
       </div>
     </header>
@@ -940,6 +957,73 @@
             <button type="submit">Next</button>
           </form>
         </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <div class="search-container-heading">
+        <h2>Search</h2>
+        <button onclick="viewSearchbar()">✕</button>
+      </div>
+      <form action="" method="post" class="search-holder">
+        <input type="text" placeholder="Search decorations..." />
+      </form>
+      <p class="trending-text">
+        Trendings
+        <img
+          src="assets/icons/fire.svg"
+          alt="fire icon"
+          height="20"
+          width="20"
+        />
+      </p>
+
+      <div class="trending-container">
+        <button class="trending-btn">
+          Birthday
+          <img
+            src="assets/icons/trending.svg"
+            alt="trending icon"
+            height="20"
+            width="20"
+          />
+        </button>
+        <button class="trending-btn">
+          Anniversary
+          <img
+            src="assets/icons/trending.svg"
+            alt="trending icon"
+            height="20"
+            width="20"
+          />
+        </button>
+        <button class="trending-btn">
+          Welcome Baby
+          <img
+            src="assets/icons/trending.svg"
+            alt="trending icon"
+            height="20"
+            width="20"
+          />
+        </button>
+        <button class="trending-btn">
+          Car Decor
+          <img
+            src="assets/icons/trending.svg"
+            alt="trending icon"
+            height="20"
+            width="20"
+          />
+        </button>
+        <button class="trending-btn">
+          Cabana
+          <img
+            src="assets/icons/trending.svg"
+            alt="trending icon"
+            height="20"
+            width="20"
+          />
+        </button>
       </div>
     </div>
     <script defer src="assets/js/script.js"></script>

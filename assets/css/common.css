@@ -108,7 +108,9 @@ main {
 .searchHolder {
   width: 30rem;
 }
-.searchHolder > input {
+
+.searchHolder > input,
+.search-holder > input {
   display: block;
 
   width: 100%;
@@ -120,6 +122,9 @@ main {
   background: url("../icons/search.svg") center right 0.7rem no-repeat,
     transparent;
   border-radius: 1rem;
+}
+.search-holder > input {
+  padding: 1.5rem;
 }
 
 .flex1 {
@@ -179,7 +184,8 @@ main {
   width: 5rem;
   opacity: 0.7;
 }
-.close-sidemenu {
+.close-sidemenu,
+.search-container-heading > button {
   font-size: 2rem;
   padding: 0.3rem 0.8rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
@@ -697,7 +703,12 @@ footer {
   background-color: transparent;
   border: none;
 }
-.footer-menu-link > img {
+
+.footer-menu-link > span {
+  color: var(--light-black);
+  font: 400 1.3rem var(--medium);
+}
+.footer-menu-icon {
   display: block;
   margin: auto;
   height: 3rem;
@@ -705,7 +716,73 @@ footer {
   opacity: 0.6;
   vertical-align: middle;
 }
+.circle-fill {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+}
 
+.search-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  animation: signupFadein 0.5s ease 0s 1 forwards;
+}
+
+.search-container-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.search-container-heading > h2 {
+  color: var(--light-black);
+  font: 500 2.5rem var(--medium);
+}
+
+.trending-text {
+  margin: 2rem 0rem;
+  color: var(--light-black);
+  font: 500 1.7rem var(--medium);
+}
+.trending-text > img {
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: middle;
+}
+
+.trending-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trending-btn {
+  background-color: #fff;
+  padding: 0 1.6rem;
+  margin-right: 1.2rem;
+  font-style: normal;
+  font: 700 1.4rem var(--medium);
+  line-height: 2rem;
+  height: 4rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #212121;
+  border: 0.1rem solid rgba(0, 0, 0, 0.11);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
 /* sign up popup */
 .sign-in-modal {
   display: none;

@@ -246,3 +246,7 @@ function confirmPasswordViewer(img) {
 function viewSidebar() {
   document.querySelector(".sidemenu-wrapper").classList.toggle("block");
 }
+
+function viewSearchbar() {
+  document.querySelector(".search-container").classList.toggle("block");
+}
