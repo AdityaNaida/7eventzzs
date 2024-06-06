@@ -1,0 +1,15 @@
+.category-routes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 0rem;
+}
+
+.category-route {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+.category-route > img {
+  height: auto;
+  width: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
